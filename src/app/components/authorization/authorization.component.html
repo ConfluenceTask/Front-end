@@ -1,0 +1,17 @@
+<section class="authorization">
+  <form [formGroup]="dataUser" class="authorization_form">
+    <section class="authorization_login">
+      <h1>Логин</h1>
+      <input type="text" formControlName="login">
+    </section>
+  
+    <section class="authorization_password">
+      <h1>Пароль</h1>
+      <input type="text" formControlName="password">
+    </section>
+  
+    <section class="authorization_button">
+      <button (click)="onClick()">Отправить на проверку</button>
+    </section>
+  </form>
+</section>
