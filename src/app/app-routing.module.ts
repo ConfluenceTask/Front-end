@@ -8,9 +8,9 @@ const routes: Routes = [
   {
     path: '', component: AuthorizationComponent 
   },
-  {
-    path:'/courses', component: CoursesComponent
-  }
+  // {
+  //   path:'/courses', component: CoursesComponent
+  // }
 ];
 
 @NgModule({

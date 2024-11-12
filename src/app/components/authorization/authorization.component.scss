@@ -1,4 +1,74 @@
-.authorization {
-   
+.authorization{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 
+    .authorization_background-image{
+        height: 100vh;
+        width: 70vw;
+    }
+    
+    .authorization_block{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .authorization_logo{
+            display: flex;
+            flex-direction: row;
+
+            .authorization_logo-img{
+                height: 4vh;
+                width: 2vw; 
+            }
+
+            .authorization_logo-text{
+                display: flex;
+                flex-direction: column;
+                padding-left: 5px;
+
+                .authorization_brusnika{
+                    height: 2.5vh;
+                    width: 13vw;
+
+                }
+
+                .authorization_data-base{
+                    height: 1vh;
+                    width: 7vw;
+                }
+            }
+        }
+
+        .authorization_form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-right: 7vw;
+            align-items: center;
+
+            .authorization_login, .authorization_password, .authorization_button{
+                height: 4vh;
+                width: 15vw;
+                margin: 15px 0px;
+            }
+
+            .authorization_login, .authorization_password{
+                border: 1px solid #14191A1F;
+                border-radius: 4px;
+                padding: 0px 20px;
+            }
+
+
+
+            .authorization_button{
+                border: none;
+                border-radius: 4px;
+                background-color: #EF3D24;
+                width: 17vw;
+            }
+        }
+    }
+
+    
 }

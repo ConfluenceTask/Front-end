@@ -1,17 +1,31 @@
 <section class="authorization">
-  <form [formGroup]="dataUser" class="authorization_form">
-    <section class="authorization_login">
-      <h1>Логин</h1>
-      <input type="text" formControlName="login">
+
+  <img src="../../../assets/images/задний план_вход.jpg" class="authorization_background-image">
+
+  <section class="authorization_block">
+
+    <section class="authorization_logo">
+      <img src="../../../assets/images/брусника_лого.jpg" class="authorization_logo-img">
+
+      <section class="authorization_logo-text">
+        <img src="../../../assets/images/брусника_слово.jpg" class="authorization_brusnika">
+        <img src="../../../assets/images/База знаний_слово.jpg" class="authorization_data-base">
+      </section>
+
     </section>
-  
-    <section class="authorization_password">
-      <h1>Пароль</h1>
-      <input type="text" formControlName="password">
-    </section>
-  
-    <section class="authorization_button">
-      <button (click)="onClick()">Отправить на проверку</button>
-    </section>
-  </form>
+
+    <h1>Вход</h1>
+
+    <form [formGroup]="dataUser" class="authorization_form">
+
+      <input type="text" formControlName="login" placeholder="Логин" class="authorization_login">
+    
+      <input type="text" formControlName="password" placeholder="Пароль" class="authorization_password">
+    
+      <button (click)="onClick()" class="authorization_button">Отправить на проверку</button>
+
+    </form>
+
+  </section>
+
 </section>
