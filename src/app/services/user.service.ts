@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IUserData } from '../interfaces/user.interface';
 
 @Injectable()
 export class UserService {
@@ -11,7 +12,8 @@ export class UserService {
         this._http.get(this.URL)
     } 
 
-    public checkUsers(login: string, password: string): void{
-        setInterval(() => this._http.post(this.URL, {login, password}).subscribe().unsubscribe(), 5000)
+    public checkUsers(DataUser: IUserData): void{
+        setInterval(() => this._http.post(this.URL, DataUser).subscribe().unsubscribe(), 5000)
+        console.log(DataUser)
     }
 }

@@ -6,11 +6,17 @@ import { CoursesComponent } from './components/courses/courses.component';
 
 const routes: Routes = [
   {
-    path: '', component: AuthorizationComponent 
+    path: '',
+    redirectTo: 'authorization',
+    pathMatch: 'full'
   },
-  // {
-  //   path:'/courses', component: CoursesComponent
-  // }
+  {
+    path: 'authorization',
+    component: AuthorizationComponent
+  },
+  {
+    path:'courses', component: CoursesComponent
+  }
 ];
 
 @NgModule({

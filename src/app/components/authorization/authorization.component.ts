@@ -22,6 +22,6 @@ export class AuthorizationComponent {
       password: this.dataUser.controls['password'].value
     }
 
-    this._userService.checkUsers(DataUser.login, DataUser.password)
+    this._userService.checkUsers(DataUser)
   }
 }
