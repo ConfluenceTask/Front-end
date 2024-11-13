@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {User} from "../../interfaces/user.interface";
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-authorization',
@@ -8,6 +8,8 @@ import {User} from "../../interfaces/user.interface";
   styleUrl: './authorization.component.scss'
 })
 export class AuthorizationComponent {
+
+  constructor(private _userService: UserService){}
 
   public dataUser: FormGroup = new FormGroup({
     login: new FormControl<string>('', Validators.required),
@@ -20,6 +22,6 @@ export class AuthorizationComponent {
       password: this.dataUser.controls['password'].value
     }
 
-    console.log(DataUser)
+    this._userService.checkUsers(DataUser.login, DataUser.password)
   }
 }
