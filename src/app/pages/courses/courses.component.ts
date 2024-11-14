@@ -6,16 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './courses.component.scss'
 })
 export class CoursesComponent {
-  public courses$ = courses
+  public editor: boolean = false
+
+  protected switchStatus(): void {
+    if(this.editor === true){
+      this.editor = false
+    }
+    else{ 
+      this.editor = true
+    }
+  }
 }
 
-let courses = [
-  {
-    name: "courseOne",
-    description: "Много текста"
-  },
-  {
-    name: "courseTwo",
-    description: "Очень много текста"
-  }
-]
+

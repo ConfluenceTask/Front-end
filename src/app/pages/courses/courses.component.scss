@@ -1,0 +1,29 @@
+.main_editor-section, .main_add-section, .main_cancellation {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 4vh;
+    padding: 0 1vw;
+}
+
+.main {
+    margin: 0 5vw;
+
+    .main_buttons {
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+
+        .main_editor-section {
+            background-color: #14191A;
+        }
+
+        .main_add-section {
+            background-color: #14191A;
+            margin-right: 2vw;
+        }
+        .main_cancellation {
+            background-color: #757575;
+        }
+    }
+}

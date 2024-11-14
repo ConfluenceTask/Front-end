@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    height: 8vh;
+
+    .header_logo {
+        color: white;
+        margin: 0 0 0 2vw !important;
+    }
+}

@@ -1,0 +1,18 @@
+<main class="card">
+    <!-- @if(courses$ | async ; as courses){ -->
+        @for(course of courses$; track course){
+            <a>
+                <section class="card_course">
+                    
+                    <section class="card_information">
+                        <h3 class="card_name">{{course.name}}</h3>
+                        <button class="card_favourites"></button>
+                    </section>
+
+                    <img src={{course}}>
+
+                </section>
+            </a>
+        }
+    <!-- } -->
+</main>

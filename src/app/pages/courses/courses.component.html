@@ -1,0 +1,15 @@
+<app-static-header></app-static-header>
+<app-active-header></app-active-header>
+
+<main class="main">
+    <section class="main_buttons">
+        @if(editor === false){
+            <button class="main_editor-section" (click)="switchStatus()">Редактирование областей</button>
+        }
+        @else {
+            <button class="main_add-section">Добавить область</button>
+            <button class="main_cancellation" (click)="switchStatus()">Отмена</button>
+        }
+    </section>
+    <app-card [editorStatus]="editor"></app-card>
+</main>

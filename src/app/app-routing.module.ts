@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AppComponent} from "./app.component";
-import {AuthorizationComponent} from "./components/authorization/authorization.component";
-import { CoursesComponent } from './components/courses/courses.component';
+import { AuthorizationComponent } from "./pages/authorization/authorization.component";
+import { CoursesComponent } from './pages/courses/courses.component';
+import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 
 const routes: Routes = [
   {
@@ -15,8 +15,14 @@ const routes: Routes = [
     component: AuthorizationComponent
   },
   {
-    path:'courses', component: CoursesComponent
+    path: 'courses',
+    component: CoursesComponent
+  },
+  {
+    path: 'main',
+    component: MainMenuComponent
   }
+
 ];
 
 @NgModule({

@@ -1,0 +1,33 @@
+<header class="header">
+    <section class="header_sides">
+
+        <section class="header_left-side">
+
+            <a href="" class="header_main-page">Главная</a>
+
+            <select name="" id="" class="header_section">
+                <option value="">Профессиональная область</option>
+                @for (region of regions; track $index) {
+                    <option value="">Область 1</option>
+                }
+            </select>
+
+        </section>
+
+        <section class="header_right-side">
+
+            <input type="text" class="header_search" placeholder="Поиск" (change)="filters()">
+            <section class="header_notification">
+                <button class="header_notification-button">
+                    <img src="" class="header_img-notification">
+                </button>
+            </section>
+
+            <section class="header_profile">
+                <img src="">
+                <span>Кто-то В.В</span>
+            </section>
+
+        </section>
+    </section>
+</header>
