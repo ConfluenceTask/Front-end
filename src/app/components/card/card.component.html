@@ -5,8 +5,17 @@
                 <section class="card_course">
                     
                     <section class="card_information">
-                        <h3 class="card_name">{{course.name}}</h3>
-                        <button class="card_favourites"></button>
+                        <section class="card_main-information">
+                            <h3 class="card_name">{{course.name}}</h3>
+                            <button class="card_favourites">Добавить в избранное</button>
+                        </section>
+
+                        @if(editorStatus === true){
+                            <section class="card_manipulation">
+                                <button class="card_edit">Изменить</button>
+                                <button class="card_remove">Удалить</button>
+                            </section>
+                        }
                     </section>
 
                     <img src={{course}}>
