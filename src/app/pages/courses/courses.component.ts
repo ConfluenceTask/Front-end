@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
   public editor: boolean = false
+  public userStatus: string = "admin"
 
   protected switchStatus(): void {
     if(this.editor === true){

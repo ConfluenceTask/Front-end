@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { ActiveHeaderComponent } from './headers/active-header/active-header.component';
-import { MainMenuComponent } from '../pages/main-menu/main-menu.component';
 import { StaticHeaderComponent } from './headers/static-header/static-header.component';
 import { CardComponent } from './card/card.component';
+import { RouterLink } from '@angular/router';
+
 @NgModule({
     declarations: [
         ActiveHeaderComponent,
@@ -14,6 +14,7 @@ import { CardComponent } from './card/card.component';
     ],
     imports: [
         CommonModule,
+        RouterLink
     ],
     exports: [
         StaticHeaderComponent,
@@ -24,6 +25,7 @@ import { CardComponent } from './card/card.component';
         UserService
     ],
 })
+
 export class ComponentsModule {
 
 }
