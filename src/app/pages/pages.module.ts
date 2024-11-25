@@ -9,6 +9,13 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { ErrorComponent } from './error/error.component';
 import { RouterLink } from '@angular/router';
 import { EditorComponent } from './editor/editor.component';
+import { TextEditorComponent } from './text-editor/text-editor.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -16,18 +23,26 @@ import { EditorComponent } from './editor/editor.component';
         CoursesComponent,
         MainMenuComponent,
         ErrorComponent,
-        EditorComponent
+        EditorComponent,
+        TextEditorComponent
     ],
     imports: [ 
         CommonModule,
         ComponentsModule,
         ReactiveFormsModule,
-        RouterLink
+        FormsModule,
+        RouterLink,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatButtonToggleModule
     ],
     exports: [
         AuthorizationComponent,
         CoursesComponent,
-        MainMenuComponent
+        MainMenuComponent,
+        TextEditorComponent
     ],
     providers: [
         UserService

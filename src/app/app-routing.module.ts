@@ -5,6 +5,8 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { EditorComponent } from './pages/editor/editor.component';
+import { AuthorizationGuard } from './guards/authorization.guard';
+import { TextEditorComponent } from './pages/text-editor/text-editor.component';
 
 const routes: Routes = [
   {
@@ -18,15 +20,18 @@ const routes: Routes = [
   },
   {
     path: 'courses',
-    component: CoursesComponent
+    component: CoursesComponent,
+    canActivate: [AuthorizationGuard]
   },
   {
     path: 'main',
-    component: MainMenuComponent
+    component: MainMenuComponent,
+    canActivate: [AuthorizationGuard]
   },
   {
     path: 'editor',
-    component: EditorComponent
+    component: TextEditorComponent,
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: '**',

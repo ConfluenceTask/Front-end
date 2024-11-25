@@ -1,0 +1,38 @@
+<div class="editor-container">
+  <mat-toolbar class="editor-toolbar">
+    <div class="button-group">
+      <button mat-icon-button (click)="applyStyle('bold')" matTooltip="Жирный">
+        <mat-icon>format_bold</mat-icon>
+      </button>
+      <button mat-icon-button (click)="applyStyle('italic')" matTooltip="Курсив">
+        <mat-icon>format_italic</mat-icon>
+      </button>
+    </div>
+
+    <div class="button-group">
+      <button mat-icon-button (click)="applyStyle('left')" matTooltip="По левому краю">
+        <mat-icon>format_align_left</mat-icon>
+      </button>
+      <button mat-icon-button (click)="applyStyle('center')" matTooltip="По центру">
+        <mat-icon>format_align_center</mat-icon>
+      </button>
+      <button mat-icon-button (click)="applyStyle('right')" matTooltip="По правому краю">
+        <mat-icon>format_align_right</mat-icon>
+      </button>
+    </div>
+
+    <div class="button-group">
+      <button mat-icon-button (click)="toggleList('ordered')" matTooltip="Нумерованный список">
+        <mat-icon>format_list_numbered</mat-icon>
+      </button>
+      <button mat-icon-button (click)="toggleList('unordered')" matTooltip="Маркированный список">
+        <mat-icon>format_list_bulleted</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <div #editorContent 
+       class="editor-content" 
+       contenteditable="true">
+  </div>
+</div>

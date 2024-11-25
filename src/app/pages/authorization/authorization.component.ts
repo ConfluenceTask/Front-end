@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import { UserService } from '../../services/user.service';
 
@@ -22,6 +22,7 @@ export class AuthorizationComponent {
       password: this.dataUser.controls['password'].value
     }
 
+    this._userService.isLoggedIn = true
     this._userService.checkUsers(DataUser)
   }
 }
