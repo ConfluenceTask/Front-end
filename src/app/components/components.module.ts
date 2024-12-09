@@ -5,12 +5,14 @@ import { ActiveHeaderComponent } from './headers/active-header/active-header.com
 import { StaticHeaderComponent } from './headers/static-header/static-header.component';
 import { CardComponent } from './card/card.component';
 import { RouterLink } from '@angular/router';
+import { SideFilterComponent } from './side-filter/side-filter.component';
 
 @NgModule({
     declarations: [
         ActiveHeaderComponent,
         StaticHeaderComponent,
-        CardComponent
+        CardComponent,
+        SideFilterComponent
     ],
     imports: [
         CommonModule,
@@ -19,7 +21,8 @@ import { RouterLink } from '@angular/router';
     exports: [
         StaticHeaderComponent,
         ActiveHeaderComponent,
-        CardComponent
+        CardComponent,
+        SideFilterComponent
     ],
     providers: [
         UserService
