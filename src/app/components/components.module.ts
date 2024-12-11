@@ -6,13 +6,15 @@ import { StaticHeaderComponent } from './headers/static-header/static-header.com
 import { CardComponent } from './card/card.component';
 import { RouterLink } from '@angular/router';
 import { SideFilterComponent } from './side-filter/side-filter.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
     declarations: [
         ActiveHeaderComponent,
         StaticHeaderComponent,
         CardComponent,
-        SideFilterComponent
+        SideFilterComponent,
+        AdminPanelComponent
     ],
     imports: [
         CommonModule,

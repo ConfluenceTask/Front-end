@@ -6,11 +6,6 @@ export const AuthorizationGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const statusAuthorization = inject(UserService).isAuthenticated();
 
-  if (statusAuthorization === true) {
-    return true;
-  }
-  else{
-    router.navigate(['/authorization']);
-    return false;
-  }
+  console.log(statusAuthorization)
+  return statusAuthorization || router.createUrlTree(['/authorization']);
 };

@@ -12,17 +12,16 @@ export class AuthorizationComponent {
   constructor(private _userService: UserService){}
 
   public dataUser: FormGroup = new FormGroup({
-    login: new FormControl<string>('', Validators.required),
-    password: new FormControl<string>('', Validators.required)
+    username: new FormControl<string>("", Validators.required),
+    password: new FormControl<string>("", Validators.required)
   })
 
   protected onClick(): void{
     const DataUser = {
-      login: this.dataUser.controls['login'].value,
-      password: this.dataUser.controls['password'].value
+      username: this.dataUser.controls["username"].value,
+      password: this.dataUser.controls["password"].value
     }
-
-    this._userService.isLoggedIn = true
+    
     this._userService.checkUsers(DataUser)
   }
 }
