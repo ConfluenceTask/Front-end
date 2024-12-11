@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
+import { AdminPanelAddUserComponent } from './admin-panel/admin-panel-add-user.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
         MainMenuComponent,
         ErrorComponent,
         EditorComponent,
-        TextEditorComponent
+        TextEditorComponent,
+        AdminPanelAddUserComponent
     ],
     imports: [ 
         CommonModule,

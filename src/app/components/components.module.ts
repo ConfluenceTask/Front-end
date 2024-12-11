@@ -6,7 +6,7 @@ import { StaticHeaderComponent } from './headers/static-header/static-header.com
 import { CardComponent } from './card/card.component';
 import { RouterLink } from '@angular/router';
 import { SideFilterComponent } from './side-filter/side-filter.component';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminPanelRedirectComponent } from './admin-panel/admin-panel-redirect.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +14,7 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
         StaticHeaderComponent,
         CardComponent,
         SideFilterComponent,
-        AdminPanelComponent
+        AdminPanelRedirectComponent
     ],
     imports: [
         CommonModule,
@@ -24,7 +24,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
         StaticHeaderComponent,
         ActiveHeaderComponent,
         CardComponent,
-        SideFilterComponent
+        SideFilterComponent,
+        AdminPanelRedirectComponent
     ],
     providers: [
         UserService

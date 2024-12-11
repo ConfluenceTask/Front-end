@@ -6,6 +6,7 @@ import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthorizationGuard } from './guards/authorization.guard';
 import { TextEditorComponent } from './pages/text-editor/text-editor.component';
+import { AdminPanelAddUserComponent } from './pages/admin-panel/admin-panel-add-user.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'editor',
     component: TextEditorComponent,
+    canActivate: [AuthorizationGuard]
+  },
+  {
+    path: 'admin-panel-add-user',
+    component: AdminPanelAddUserComponent,
     canActivate: [AuthorizationGuard]
   },
   {

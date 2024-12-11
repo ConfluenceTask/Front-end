@@ -1,0 +1,44 @@
+<app-static-header></app-static-header>
+<app-active-header></app-active-header>
+<main class="admin-panel">
+    <!-- <app-admin-panel-redirect></app-admin-panel-redirect> -->
+     <form action="" [formGroup]="dataUserSave">
+        <h1>Роль</h1>
+        <select formControlName="roles">
+            <option value="">Участник</option>
+            <option value="">Администратор</option>
+            <option value="">редактор</option>
+        </select>
+
+        <h1>Должность</h1>
+        <select formControlName="major">
+            <option value="">Должность 1</option>
+            <option value="">Должность 2</option>
+            <option value="">Должность 3</option>
+        </select>
+
+        <h1>Стажер</h1>
+        <select formControlName="trainee">
+            <option value="">Да</option>
+            <option value="">Нет</option>
+        </select>
+
+        <h1>Номер телефона</h1>
+        <input type="text" formControlName="phoneNumber" placeholder="Номер телефона" class="authorization_login">
+
+        <h1>Электронная почта(Логин)</h1>
+        <input type="text" formControlName="email" placeholder="Электронная почта" class="authorization_login">
+        
+        <h1>Имя</h1>
+        <input type="text" formControlName="username" placeholder="Имя" class="authorization_login">
+        
+        <h1>Фамилия</h1>
+        <input type="text" formControlName="lastName" placeholder="Фамилия" class="authorization_login">
+        
+        <h1>Отчество</h1>
+        <input type="text" formControlName="firstName" placeholder="Отчество" class="authorization_login">
+
+     </form>
+
+     <button (click)="saveUser()">Добавить пользователя</button>
+</main>
