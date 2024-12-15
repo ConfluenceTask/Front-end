@@ -6,7 +6,7 @@ import { StaticHeaderComponent } from './headers/static-header/static-header.com
 import { CardComponent } from './card/card.component';
 import { RouterLink } from '@angular/router';
 import { SideFilterComponent } from './side-filter/side-filter.component';
-import { AdminPanelRedirectComponent } from './admin-panel/admin-panel-redirect.component';
+import { AdminPanelRedirectComponent } from './admin-panel-redirect/admin-panel-redirect.component';
 
 @NgModule({
     declarations: [

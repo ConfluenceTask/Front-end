@@ -15,29 +15,21 @@
 
         .authorization_logo{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
             .authorization_logo-img{
                 height: 4vh;
-                width: 2vw; 
+                width: 13vw; 
             }
 
-            .authorization_logo-text{
-                display: flex;
-                flex-direction: column;
-                padding-left: 5px;
-
-                .authorization_brusnika{
-                    height: 2.5vh;
-                    width: 13vw;
-
-                }
-
-                .authorization_data-base{
-                    height: 1vh;
-                    width: 7vw;
-                }
+            .authorization_data-base{
+                position: relative;
+                bottom: 10px;
+                height: 1vh;
+                width: 7vw;
+                margin-left: 2.6vw;
             }
+
         }
 
         .authorization_form{
