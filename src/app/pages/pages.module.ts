@@ -17,6 +17,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
 import { AdminPanelAddUserComponent } from './admin-panel/admin-panel-add-user.component';
+import { LibraryService } from '../services/library.service';
 
 @NgModule({
     declarations: [
@@ -47,7 +48,8 @@ import { AdminPanelAddUserComponent } from './admin-panel/admin-panel-add-user.c
         TextEditorComponent
     ],
     providers: [
-        UserService
+        UserService,
+        LibraryService
     ],
 })
 export class PagesModule {}

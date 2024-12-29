@@ -1,29 +1,14 @@
 <main class="card">
-    <!-- @if(courses$ | async ; as courses){ -->
-        @for(course of courses$; track course){
-            <a>
-                <section class="card_course">
-                    
-                    <section class="card_information">
+    <section class="card_block-paragraph">
+        <h1>{{course?.paragraph}}</h1>
+        <img [src]="course?.avatar">
+    </section>
 
-                        <section class="card_main-information">
-                            <h3 class="card_name">{{course.name}}</h3>
-                            <button class="card_favourites">Добавить в избранное</button>
-                        </section>
+    <section class="card_descriptions">
+        <h2>{{course?.description}}</h2>
+    </section>
 
-                        @if(editorStatus === true){
-                            <section class="card_manipulation">
-                                <button class="card_edit">Изменить</button>
-                                <button class="card_remove">Удалить</button>
-                            </section>
-                        }
-                        
-                    </section>
-
-                    <img src={{course}}>
-
-                </section>
-            </a>
-        }
-    <!-- } -->
+    <section class="card_main-text">
+        <h2>{{course?.mainText}}</h2>
+    </section>
 </main>

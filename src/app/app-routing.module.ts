@@ -7,6 +7,8 @@ import { ErrorComponent } from './pages/error/error.component';
 import { AuthorizationGuard } from './guards/authorization.guard';
 import { TextEditorComponent } from './pages/text-editor/text-editor.component';
 import { AdminPanelAddUserComponent } from './pages/admin-panel/admin-panel-add-user.component';
+import { CardComponent } from './components/card/card.component';
+import { EditorComponent } from './pages/editor/editor.component';
 
 const routes: Routes = [
   {
@@ -29,8 +31,13 @@ const routes: Routes = [
     canActivate: [AuthorizationGuard]
   },
   {
+    path: 'course/:id',
+    component: CardComponent,
+    canActivate: [AuthorizationGuard]
+  },
+  {
     path: 'editor',
-    component: TextEditorComponent,
+    component: EditorComponent,
     canActivate: [AuthorizationGuard]
   },
   {
