@@ -7,7 +7,11 @@
 }
 
 .main {
-    margin: 0 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
 
     .main_buttons {
         display: flex;
@@ -16,14 +20,17 @@
 
         .main_editor-section {
             background-color: #14191A;
+            margin: 0vh 2vw;
         }
 
         .main_add-section {
             background-color: #14191A;
             margin-right: 2vw;
         }
+
         .main_cancellation {
             background-color: #757575;
+            margin: 0vh 2vw;
         }
     }
 }

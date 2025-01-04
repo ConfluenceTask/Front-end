@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-side-filter',
@@ -8,4 +7,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class SideFilterComponent {
   
+  public inputFilter: string = ""
+
+  public changeFilter(): void{
+    console.log(this.inputFilter)
+  }
 }

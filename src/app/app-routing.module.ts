@@ -5,7 +5,6 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthorizationGuard } from './guards/authorization.guard';
-import { TextEditorComponent } from './pages/text-editor/text-editor.component';
 import { AdminPanelAddUserComponent } from './pages/admin-panel/admin-panel-add-user.component';
 import { CardComponent } from './components/card/card.component';
 import { EditorComponent } from './pages/editor/editor.component';

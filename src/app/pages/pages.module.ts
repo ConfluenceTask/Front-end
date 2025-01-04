@@ -9,15 +9,10 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { ErrorComponent } from './error/error.component';
 import { RouterLink } from '@angular/router';
 import { EditorComponent } from './editor/editor.component';
-import { TextEditorComponent } from './text-editor/text-editor.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
 import { AdminPanelAddUserComponent } from './admin-panel/admin-panel-add-user.component';
 import { LibraryService } from '../services/library.service';
+import { ListUsersComponent } from './list-users/list-users.component';
 
 @NgModule({
     declarations: [
@@ -26,8 +21,8 @@ import { LibraryService } from '../services/library.service';
         MainMenuComponent,
         ErrorComponent,
         EditorComponent,
-        TextEditorComponent,
-        AdminPanelAddUserComponent
+        AdminPanelAddUserComponent,
+        ListUsersComponent
     ],
     imports: [ 
         CommonModule,
@@ -35,17 +30,11 @@ import { LibraryService } from '../services/library.service';
         ReactiveFormsModule,
         FormsModule,
         RouterLink,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        MatTooltipModule,
-        MatButtonToggleModule
     ],
     exports: [
         AuthorizationComponent,
         CoursesComponent,
         MainMenuComponent,
-        TextEditorComponent
     ],
     providers: [
         UserService,

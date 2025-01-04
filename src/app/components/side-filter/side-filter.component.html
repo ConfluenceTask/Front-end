@@ -1,3 +1,35 @@
 <section class="filter-container">
-  <header class="filter-header">Фильтр</header>
+
+  <section class="filter-container_search">
+    <input type="text" [(ngModel)]="inputFilter" (change)="changeFilter()">
+    <header class="filter-header">Фильтр</header>  
+  </section>
+
+  <section class="filter-container_sections">
+
+    <select class="filter-container_select" (onchange)="changeFilter()">
+      <option value="">Статья</option>
+    </select>
+
+    <select class="filter-container_select" (onchange)="changeFilter()">
+      <option value="">Глосарий</option>
+    </select>
+
+    <select class="filter-container_select" (onchange)="changeFilter()">
+      <option value="">Профильная документация</option>
+    </select>
+
+    <select class="filter-container_select" (onchange)="changeFilter()">
+      <option value="">Кооперативнвя документация</option>
+    </select>
+
+    <select class="filter-container_select" (onchange)="changeFilter()">
+      <option value="">Юридическа документация</option>
+    </select>
+
+    <select class="filter-container_select" (onchange)="changeFilter()">
+      <option value="">Профессиональная документация</option>
+    </select>
+
+  </section>  
 </section> 

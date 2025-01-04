@@ -1,8 +1,10 @@
 <app-static-header></app-static-header>
 <app-active-header></app-active-header>
 
-<app-side-filter></app-side-filter>
 <main class="main">
+    <app-side-filter></app-side-filter>
+    <app-list_card [editorStatus]="editor"></app-list_card>
+
     @if(userStatus === "admin"){
         <section class="main_buttons">
             @if(editor === false){
@@ -14,5 +16,4 @@
             }
         </section>
     }
-    <app-list_card [editorStatus]="editor"></app-list_card>
 </main>

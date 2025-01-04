@@ -1,0 +1,25 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0vh 2vw;
+    height: 100%;
+
+    .filter-container_search {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .filter-container_sections {
+        display: flex;
+        flex-direction: column;
+
+        .filter-container_select {
+            margin: 1vh 0vw;
+
+        }
+    }
+
+
+}
+

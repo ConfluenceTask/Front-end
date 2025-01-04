@@ -1,0 +1,11 @@
+.list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    .list_card-user{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+}

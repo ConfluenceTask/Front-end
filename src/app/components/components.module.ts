@@ -9,6 +9,13 @@ import { SideFilterComponent } from './side-filter/side-filter.component';
 import { AdminPanelRedirectComponent } from './admin-panel-redirect/admin-panel-redirect.component';
 import { CardComponent } from './card/card.component';
 import { LibraryService } from '../services/library.service';
+import { TextEditorComponent } from './text-editor/text-editor.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -18,10 +25,17 @@ import { LibraryService } from '../services/library.service';
         ListCardComponent,
         SideFilterComponent,
         AdminPanelRedirectComponent,
+        TextEditorComponent
     ],
     imports: [
         CommonModule,
-        RouterLink
+        RouterLink,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatButtonToggleModule,
+        FormsModule
     ],
     exports: [
         StaticHeaderComponent,
@@ -29,7 +43,8 @@ import { LibraryService } from '../services/library.service';
         CardComponent,
         ListCardComponent,
         SideFilterComponent,
-        AdminPanelRedirectComponent
+        AdminPanelRedirectComponent,
+        TextEditorComponent
     ],
     providers: [
         UserService,
