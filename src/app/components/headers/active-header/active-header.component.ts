@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ActiveHeaderComponent {
   public regions: string[] = []
+  public userName: string | null = localStorage.getItem("username")
+
 
   public filters(): void{
 

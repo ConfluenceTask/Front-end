@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
   public editor: boolean = false
-  public userStatus: string = "admin"
+  public userStatus: string | null = localStorage.getItem("role")
 
   protected switchStatus(): void {
     if(this.editor === true){

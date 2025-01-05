@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { LibraryService } from '../../services/library.service';
-import { coursesData$ } from '../../../data/courses-data';
+import { coursesData$ } from '../../../data/courses-list';
 
 @Component({
   selector: 'app-list_card',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { coursesData$ } from '../../data/courses-data';
+import { coursesData$ } from '../../data/courses-list';
 import { take } from 'rxjs';
 
 @Injectable()

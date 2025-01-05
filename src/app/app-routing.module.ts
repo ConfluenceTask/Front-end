@@ -8,6 +8,7 @@ import { AuthorizationGuard } from './guards/authorization.guard';
 import { AdminPanelAddUserComponent } from './pages/admin-panel/admin-panel-add-user.component';
 import { CardComponent } from './components/card/card.component';
 import { EditorComponent } from './pages/editor/editor.component';
+import { AdminPanelGuard } from './guards/admin-panel.guard';
 
 const routes: Routes = [
   {
@@ -42,7 +43,7 @@ const routes: Routes = [
   {
     path: 'admin-panel-add-user',
     component: AdminPanelAddUserComponent,
-    canActivate: [AuthorizationGuard]
+    canActivate: [AuthorizationGuard, AdminPanelGuard]
   },
   {
     path: '**',

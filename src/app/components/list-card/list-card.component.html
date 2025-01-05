@@ -1,7 +1,7 @@
 <main class="card">
     @if(courses$ | async; as courses){
         @for(course of courses; track course){
-            <a [routerLink]="['/course', course.id]">
+            <a [routerLink]="['/course', course.id]" class="card_link">
                 <section class="card_course">
                     
                     <section class="card_information">

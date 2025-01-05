@@ -9,7 +9,7 @@ export const coursesData$ = new Observable<ICourse[]>((add) => {
 const coursesData = [
     {
         id: 1,
-        avatar: "",
+        avatar: "../../assets/images/cards/67dae236440d66d6a04d840b9113bd01.jpg",
         paragraph: "Карта 1",
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
@@ -17,7 +17,7 @@ const coursesData = [
     },
     {
         id: 2,
-        avatar: "",
+        avatar: "../../assets/images/cards/images.jpg",
         paragraph: "Карта 2",
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
@@ -25,7 +25,7 @@ const coursesData = [
     },
     {
         id: 3,
-        avatar: "",
+        avatar: "../../assets/images/cards/images (1).jpg",
         paragraph: "Карта 3",
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
@@ -33,7 +33,7 @@ const coursesData = [
     },
     {
         id: 4,
-        avatar: "",
+        avatar: "../../assets/images/cards/67dae236440d66d6a04d840b9113bd01.jpg",
         paragraph: "Карта 4",
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",

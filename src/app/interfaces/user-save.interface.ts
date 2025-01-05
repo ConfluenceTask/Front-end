@@ -6,5 +6,6 @@ export interface IUserDataSave {
     email: string,
     username: string,
     lastname: string,
-    patronymic: string
+    patronymic: string,
+    password: string
 }

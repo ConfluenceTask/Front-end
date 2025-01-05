@@ -21,6 +21,7 @@ export class AdminPanelAddUserComponent {
     username: new FormControl<string>("", Validators.required),
     lastname: new FormControl<string>("", Validators.required),
     patronymic: new FormControl<string>("", Validators.required),
+    password: new FormControl<number>(0, Validators.required)
   })
 
   protected saveUser(): void{
@@ -32,7 +33,8 @@ export class AdminPanelAddUserComponent {
       email: this.dataUserSave.controls["email"].value,
       username: this.dataUserSave.controls["username"].value,
       lastname: this.dataUserSave.controls["lastname"].value,
-      patronymic: this.dataUserSave.controls["patronymic"].value
+      patronymic: this.dataUserSave.controls["patronymic"].value,
+      password: this.dataUserSave.controls["password"].value
     }
 
     this._userService.saveUsers(DataUserSave)

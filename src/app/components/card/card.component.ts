@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { coursesData$ } from '../../../data/courses-data';
+import { coursesData$ } from '../../../data/courses-list';
 import { ICourse } from '../../interfaces/course.interface';
 import { take } from 'rxjs';
 
