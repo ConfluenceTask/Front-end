@@ -1,0 +1,24 @@
+<main class="list-users">
+    <section class="list-users_header">
+        <h1>Номер телефона</h1>
+        <h1>Эл.Почта</h1>
+        <h1>Фамилия</h1>
+        <h1>Имя</h1>
+        <h1>Отчество</h1>
+        <h1>Роль</h1>
+        <h1>Должность</h1>
+    </section>
+    @if(users$ | async; as users){
+        @for(user of users; track user){
+            <section class="list-users_card">
+                <h1>{{user.phoneNumber}}</h1>
+                <h1>{{user.email}}</h1>
+                <h1>{{user.lastname}}</h1>
+                <h1>{{user.username}}</h1>
+                <h1>{{user.patronymic}}</h1>
+                <h1>{{user.roles}}</h1>
+                <h1>{{user.major}}</h1>
+            </section>
+        }
+    }
+</main>

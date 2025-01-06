@@ -6,7 +6,7 @@ export const coursesData$ = new Observable<ICourse[]>((add) => {
     add.complete
 })  
 
-const coursesData = [
+const coursesData: ICourse[] = [
     {
         id: 1,
         avatar: "../../assets/images/cards/67dae236440d66d6a04d840b9113bd01.jpg",
@@ -14,6 +14,7 @@ const coursesData = [
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
         area: "",
+        favorite: false
     },
     {
         id: 2,
@@ -22,6 +23,7 @@ const coursesData = [
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
         area: "",
+        favorite: false
     },
     {
         id: 3,
@@ -30,6 +32,7 @@ const coursesData = [
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
         area: "",
+        favorite: false
     },
     {
         id: 4,
@@ -38,5 +41,6 @@ const coursesData = [
         description: "Какое-то описаие",
         mainText: "тут должен быть крутой текст но тут ничего нету",
         area: "",
+        favorite: false
     },
 ] 

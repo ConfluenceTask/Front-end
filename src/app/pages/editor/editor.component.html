@@ -30,12 +30,12 @@
     <section class="editor_buttons">
 
         <section class="editor_left-buttons">
-            <button class="editor_draft">Черновик</button>
+            <button class="editor_draft" (click)="saveDraft()">Черновик</button>
         </section>
 
         <section class="editor_right-buttons">
-            <button class="editor_publish">Опубликовать</button>
-            <button class="editor_cancellation">Отмена</button>
+            <button class="editor_publish" (click)="saveCourse()">Опубликовать</button>
+            <button class="editor_cancellation" (click)="goBack()">Отмена</button>
         </section>
 
     </section>

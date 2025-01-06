@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
+import { ListUsersComponent } from './list-users/list-users.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
         ListCardComponent,
         SideFilterComponent,
         AdminPanelRedirectComponent,
-        TextEditorComponent
+        TextEditorComponent,
+        ListUsersComponent
     ],
     imports: [
         CommonModule,
@@ -44,7 +46,8 @@ import { FormsModule } from '@angular/forms';
         ListCardComponent,
         SideFilterComponent,
         AdminPanelRedirectComponent,
-        TextEditorComponent
+        TextEditorComponent,
+        ListUsersComponent
     ],
     providers: [
         UserService,

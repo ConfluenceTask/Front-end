@@ -12,7 +12,7 @@ import { EditorComponent } from './editor/editor.component';
 import { FormsModule } from '@angular/forms';
 import { AdminPanelAddUserComponent } from './admin-panel/admin-panel-add-user.component';
 import { LibraryService } from '../services/library.service';
-import { ListUsersComponent } from './list-users/list-users.component';
+import { AdminPanelUsersComponent } from './admin-panel-users/admin-panel-users.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +22,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
         ErrorComponent,
         EditorComponent,
         AdminPanelAddUserComponent,
-        ListUsersComponent
+        AdminPanelUsersComponent
     ],
     imports: [ 
         CommonModule,

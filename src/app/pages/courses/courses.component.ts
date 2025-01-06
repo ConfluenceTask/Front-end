@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-courses',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
   public editor: boolean = false
-  public userStatus: string | null = localStorage.getItem("role")
+  public userStatus: string | null = sessionStorage.getItem("role")
 
   protected switchStatus(): void {
     if(this.editor === true){

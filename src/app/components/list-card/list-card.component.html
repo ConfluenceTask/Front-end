@@ -1,29 +1,36 @@
 <main class="card">
-    @if(courses$ | async; as courses){
+    <!-- @if(courses | async; as courses){ -->
         @for(course of courses; track course){
-            <a [routerLink]="['/course', course.id]" class="card_link">
-                <section class="card_course">
-                    
-                    <section class="card_information">
+            
+            <section class="card_course">
+                
+                <section class="card_information">
 
-                        <section class="card_main-information">
-                            <h3 class="card_name">{{course.paragraph}}</h3>
-                            <button class="card_favourites">Добавить в избранное</button>
-                        </section>
-
-                        @if(editorStatus === true){
-                            <section class="card_manipulation">
-                                <button class="card_edit">Изменить</button>
-                                <button clasng s s="card_remove">Удалить</button>
-                            </section>
+                    <section class="card_main-information">
+                        <h3 class="card_name">{{course.paragraph}}</h3>
+                        @if(course.favorite === false){
+                            <button class="card_favourites card_favourites-add" (click)="favoriteCourse(course.id)" >Добавить в избранное</button>
                         }
-                        
+                        @else {
+                            <button class="card_favourites card_favourites-remove" (click)="favoriteCourse(course.id)">Удалить из избранного</button>
+                        }
                     </section>
 
-                    <img src={{course.avatar}}>
-
+                    @if(editorStatus === true){
+                        <section class="card_manipulation">
+                            <button class="card_edit" (click)="editCourse(course.id)">Изменить</button>
+                            <button class="card_remove" (click)="deleteCourse(course.id)">Удалить</button>
+                        </section>
+                    }
+                    
                 </section>
-            </a>
+
+                <a [routerLink]="['/course', course.id]" class="card_link">
+                    <img src={{course.avatar}}>
+                </a>
+                
+            </section>
+            
         }
-    }
+    <!-- } -->
 </main>

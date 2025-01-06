@@ -5,4 +5,5 @@ export interface ICourse {
     description: string
     mainText: string
     area: string
+    favorite: boolean
 }

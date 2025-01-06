@@ -5,8 +5,9 @@
 
             <a routerLink="/main" class="header_main-page">Главная</a>
 
-            <select name="" id="" class="header_section">
+            <select name="" id="" class="header_section" [(ngModel)]="section" (change)="setSection()">
                 <option value="">Профессиональная область</option>
+                <option value="building">Область 1</option>    
                 @for (region of regions; track $index) {
                     <option value="">Область 1</option>
                 }
@@ -16,7 +17,7 @@
 
         <section class="header_right-side">
 
-            <input type="text" class="header_search" placeholder="Поиск" (change)="filters()">
+            <input type="text" class="header_search" placeholder="Поиск" (change)="setSection()">
             <section class="header_notification">
                 <button class="header_notification-button">
                     <img src="" class="header_img-notification">

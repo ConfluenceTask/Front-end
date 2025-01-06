@@ -8,10 +8,10 @@
     @if(userStatus === "admin"){
         <section class="main_buttons">
             @if(editor === false){
-                <button class="main_editor-section" (click)="switchStatus()">Редактирование областей</button>
+                <button class="main_editor-section" (click)="switchStatus()">Редактирование статей</button>
             }
             @else {
-                <button class="main_add-section">Добавить область</button>
+                <button class="main_add-section" routerLink="/editor">Добавить статьи</button>
                 <button class="main_cancellation" (click)="switchStatus()">Отмена</button>
             }
         </section>

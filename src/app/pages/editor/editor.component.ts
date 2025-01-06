@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
 export class EditorComponent {
 
 
+  public goBack(): void {
+    window.history.back();
+  }
   
+  public saveCourse(): void {
+    
+  }
+
+  public saveDraft(): void {
+    
+  }
+
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LibraryService } from '../../services/library.service';
 
 @Component({
   selector: 'app-side-filter',
@@ -9,7 +10,11 @@ export class SideFilterComponent {
   
   public inputFilter: string = ""
 
+  constructor(private _libraryService: LibraryService){}
+
   public changeFilter(): void{
     console.log(this.inputFilter)
+
+    this._libraryService.findCourse(this.inputFilter)
   }
 }

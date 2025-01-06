@@ -39,10 +39,10 @@ export class UserService {
         console.log(dataUserCheckObject)
         usersList$.pipe(take(1)).subscribe((answer) => {
             if(answer.find(user => user.username === DataUserAuthorization.username && user.password === DataUserAuthorization.password)){
-                localStorage.setItem("username", DataUserAuthorization.username)
-                localStorage.setItem("password", DataUserAuthorization.password)
-                localStorage.setItem("role", answer.find(user => user.username === DataUserAuthorization.username && user.password === DataUserAuthorization.password)!.roles)
-                localStorage.setItem("isLoggedIn", "true")
+                sessionStorage.setItem("username", DataUserAuthorization.username)
+                sessionStorage.setItem("password", DataUserAuthorization.password)
+                sessionStorage.setItem("role", answer.find(user => user.username === DataUserAuthorization.username && user.password === DataUserAuthorization.password)!.roles)
+                sessionStorage.setItem("isLoggedIn", "true")
                 this._router.navigate(['/main'])
             }
             else{
@@ -52,8 +52,8 @@ export class UserService {
 
         // this._http.post(this.URLCheckUsers, dataUserCheckObject).pipe(take(1)).subscribe((answer) => {
         //     if(answer === 200){
-        //         localStorage.setItem("username", DataUserAuthorization.username)
-        //         localStorage.setItem("password", DataUserAuthorization.password)
+        //         ses sessionStorage.setItem("username", DataUserAuthorization.username)
+        //         ses sessionStorage.setItem("password", DataUserAuthorization.password)
         //     }
         //     else{
         //         alert("error")
@@ -76,18 +76,18 @@ export class UserService {
     }
 
     public logout(): void{
-        localStorage.removeItem("login")
-        localStorage.removeItem("password")
-        localStorage.removeItem("isLoggedIn")
-        localStorage.setItem("isLoggedIn", "false")
+        sessionStorage.removeItem("login")
+        sessionStorage.removeItem("password")
+        sessionStorage.removeItem("isLoggedIn")
+        sessionStorage.setItem("isLoggedIn", "false")
         this._router.navigate(['/authorization'])
     }
 
     isAuthenticated(): boolean{
-        return localStorage.getItem("isLoggedIn") === "true"
+        return sessionStorage.getItem("isLoggedIn") === "true"
     }
 
     isAdministrator(): boolean{
-        return localStorage.getItem("role") === "admin"
+        return sessionStorage.getItem("role") === "admin"
     }
 }

@@ -1,0 +1,31 @@
+.list-users_header, .list-users_card {
+    border: 1px solid black;
+    border-top: none;
+}
+
+
+.list-users{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .list-users_header {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        h1 {
+            margin: 2vh 2vw;
+        }
+    }
+
+    .list-users_card {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        h1 {
+            margin: 2vh 1vw;
+        }
+    }
+}
