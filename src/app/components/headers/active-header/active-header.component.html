@@ -20,13 +20,14 @@
             <input type="text" class="header_search" placeholder="Поиск" (change)="setSection()">
             <section class="header_notification">
                 <button class="header_notification-button">
-                    <img src="" class="header_img-notification">
+                    <img src={{userImg}} class="header_img-notification">
                 </button>
             </section>
 
             <section class="header_profile">
-                <img src="">
-                <span>{{userName}}</span>
+                <button (click)="leaveAccount()">
+                    <span>{{userName}}</span>
+                </button>    
             </section>
 
         </section>

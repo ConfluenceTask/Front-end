@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -10,7 +10,7 @@ import { ErrorComponent } from './error/error.component';
 import { RouterLink } from '@angular/router';
 import { EditorComponent } from './editor/editor.component';
 import { FormsModule } from '@angular/forms';
-import { AdminPanelAddUserComponent } from './admin-panel/admin-panel-add-user.component';
+import { AdminPanelAddUserComponent } from './admin-panel-add-user/admin-panel-add-user.component';
 import { LibraryService } from '../services/library.service';
 import { AdminPanelUsersComponent } from './admin-panel-users/admin-panel-users.component';
 
@@ -24,7 +24,7 @@ import { AdminPanelUsersComponent } from './admin-panel-users/admin-panel-users.
         AdminPanelAddUserComponent,
         AdminPanelUsersComponent
     ],
-    imports: [ 
+    imports: [
         CommonModule,
         ComponentsModule,
         ReactiveFormsModule,
@@ -38,7 +38,7 @@ import { AdminPanelUsersComponent } from './admin-panel-users/admin-panel-users.
     ],
     providers: [
         UserService,
-        LibraryService
+        LibraryService,
     ],
 })
 export class PagesModule {}

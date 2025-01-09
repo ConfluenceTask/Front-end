@@ -15,7 +15,8 @@ export class UserService {
 
     // Сохраниенеи нового пользователя
     public saveUsers(DataUserSave: IUserDataSave): void {
-        const dataUserSaveObject: Object = {
+
+        const dataUserSaveObject: IUserDataSave = {
             roles: DataUserSave.roles,
             major: DataUserSave.major,
             trainee: DataUserSave.trainee,
@@ -24,10 +25,17 @@ export class UserService {
             username: DataUserSave.username,
             lastname: DataUserSave.lastname,
             patronymic: DataUserSave.patronymic,
-            password: this.generatePassword()
+            password: this.generatePassword(),
+            image: DataUserSave.image
         }
-        console.log(dataUserSaveObject)
-        this._http.post(this.URLSaveUser, dataUserSaveObject).pipe(take(1)).subscribe(result => console.log(result))    
+        
+        usersList$.pipe(take(1)).subscribe((answer) => {
+            answer.push(dataUserSaveObject)
+            console.log(answer)
+        })
+
+        // console.log(dataUserSaveObject)
+        // this._http.post(this.URLSaveUser, dataUserSaveObject).pipe(take(1)).subscribe(result => console.log(result))    
     }
 
     // Проверка пользвателя
@@ -42,6 +50,7 @@ export class UserService {
                 sessionStorage.setItem("username", DataUserAuthorization.username)
                 sessionStorage.setItem("password", DataUserAuthorization.password)
                 sessionStorage.setItem("role", answer.find(user => user.username === DataUserAuthorization.username && user.password === DataUserAuthorization.password)!.roles)
+                sessionStorage.setItem("userimg", answer.find(user => user.username === DataUserAuthorization.username && user.password === DataUserAuthorization.password)!.image)
                 sessionStorage.setItem("isLoggedIn", "true")
                 this._router.navigate(['/main'])
             }
@@ -76,9 +85,11 @@ export class UserService {
     }
 
     public logout(): void{
-        sessionStorage.removeItem("login")
+        sessionStorage.removeItem("username")
         sessionStorage.removeItem("password")
         sessionStorage.removeItem("isLoggedIn")
+        sessionStorage.removeItem("role")
+        sessionStorage.removeItem("userimg")
         sessionStorage.setItem("isLoggedIn", "false")
         this._router.navigate(['/authorization'])
     }

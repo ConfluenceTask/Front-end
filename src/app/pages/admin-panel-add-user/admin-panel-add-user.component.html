@@ -11,9 +11,9 @@
             <h1 class="admin-section_paragraph-block">Данные пользователя</h1>
             <h1 class="admin-section_paragraph-inputs">Роль</h1>
             <select formControlName="roles">
-                <option value="">Участник</option>
-                <option value="">Администратор</option>
-                <option value="">редактор</option>
+                <option value="user">Участник</option>
+                <option value="admin">Администратор</option>
+                <option value="editor">редактор</option>
             </select>
 
             <h1 class="admin-section_paragraph-inputs">Должность</h1>
@@ -25,8 +25,8 @@
 
             <h1 class="admin-section_paragraph-inputs">Стажер</h1>
             <select formControlName="trainee">
-                <option value="">Да</option>
-                <option value="">Нет</option>
+                <option value="true">Да</option>
+                <option value="false">Нет</option>
             </select>
 
             <h1 class="admin-section_paragraph-inputs">Номер телефона</h1>
@@ -39,10 +39,10 @@
             <input type="text" formControlName="username" placeholder="Имя" class="authorization_login">
 
             <h1 class="admin-section_paragraph-inputs">Фамилия</h1>
-            <input type="text" formControlName="lastName" placeholder="Фамилия" class="authorization_login">
+            <input type="text" formControlName="lastname" placeholder="Фамилия" class="authorization_login">
 
             <h1 class="admin-section_paragraph-inputs">Отчество</h1>
-            <input type="text" formControlName="firstName" placeholder="Отчество" class="authorization_login">
+            <input type="text" formControlName="patronymic" placeholder="Отчество" class="authorization_login">
 
             <button class="admin-section_button" (click)="saveUser()">Добавить пользователя</button>
         </form>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { last } from 'rxjs';
 import { UserService } from '../../services/user.service';
+import { IUserDataSave } from '../../interfaces/user-save.interface';
 
 @Component({
   selector: 'app-admin-panel-add-user',
@@ -21,11 +22,12 @@ export class AdminPanelAddUserComponent {
     username: new FormControl<string>("", Validators.required),
     lastname: new FormControl<string>("", Validators.required),
     patronymic: new FormControl<string>("", Validators.required),
-    password: new FormControl<number>(0, Validators.required)
+    password: new FormControl<number>(0, Validators.required),
+    image: new FormControl<string>("", Validators.required),
   })
 
   protected saveUser(): void{
-    const DataUserSave = {
+    const DataUserSave: IUserDataSave  = {
       roles: this.dataUserSave.controls["roles"].value,
       major: this.dataUserSave.controls["major"].value,
       trainee: this.dataUserSave.controls["trainee"].value,
@@ -34,7 +36,8 @@ export class AdminPanelAddUserComponent {
       username: this.dataUserSave.controls["username"].value,
       lastname: this.dataUserSave.controls["lastname"].value,
       patronymic: this.dataUserSave.controls["patronymic"].value,
-      password: this.dataUserSave.controls["password"].value
+      password: this.dataUserSave.controls["password"].value,
+      image: this.dataUserSave.controls["image"].value,
     }
 
     this._userService.saveUsers(DataUserSave)

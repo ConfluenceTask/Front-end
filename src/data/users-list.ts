@@ -16,7 +16,8 @@ const usersList: IUserDataSave[] = [
         username: "Владислав",
         lastname: "Бородатый",
         patronymic: "Владимирович",
-        password: "12345"
+        password: "12345",
+        image: "../../assets/images/avatar/photo_2024-05-18_21-34-38.jpg",
     },
     {
         roles: "user",
@@ -27,6 +28,7 @@ const usersList: IUserDataSave[] = [
         username: "Дмитрий",
         lastname: "Генеральный",
         patronymic: "Дмитриевич",
-        password: "12345"
+        password: "12345",
+        image: "../../assets/images/avatar/photo_2024-07-28_13-45-24.jpg",
     }
 ]

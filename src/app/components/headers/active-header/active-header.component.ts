@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-active-header',
@@ -8,12 +9,17 @@ import { Router } from '@angular/router';
 })
 export class ActiveHeaderComponent {
 
-  constructor(private _router: Router){}
+  constructor(private _router: Router, private _userService: UserService){}
 
   public regions: string[] = []
   public userName: string | null = sessionStorage.getItem("username")
+  public userImg: string | null = sessionStorage.getItem("userimg")
   public section?: string = ""
 
+
+  public leaveAccount(): void{
+    this._userService.logout()
+  }
 
   public setSection(): void{
     if(this.section === "building"){

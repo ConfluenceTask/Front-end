@@ -7,5 +7,6 @@ export interface IUserDataSave {
     username: string,
     lastname: string,
     patronymic: string,
-    password: string
+    password: string,
+    image: string,
 }

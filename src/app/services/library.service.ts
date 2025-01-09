@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { coursesData$ } from '../../data/courses-list';
-import { filter, map, take } from 'rxjs';
+import { take } from 'rxjs';
 import { ICourse } from '../interfaces/course.interface';
 import { Router } from '@angular/router';
 
@@ -27,26 +27,26 @@ export class LibraryService {
     public findCourse(findData: string): void {
         console.log("Поиск данных:", findData); // Логируем входные данные
 
-    if (!findData) {
-        this.courses = []; // или можно оставить предыдущий список курсов
-        console.log("Пустой запрос, возвращаем пустой массив курсов.");
-        return;
-    }
+        if (!findData) {
+            this.courses = []; // или можно оставить предыдущий список курсов
+            console.log("Пустой запрос, возвращаем пустой массив курсов.");
+            return;
+        }
 
-    const allCourses = this.getCourses();
-    console.log("Все курсы:", allCourses); // Логируем все курсы
+        const allCourses = this.getCourses();
+        console.log("Все курсы:", allCourses); // Логируем все курсы
 
-    this.courses = allCourses.filter((course) => {
-        const lowerFindData = findData.toLowerCase();
-        return (
-            course.paragraph.toLowerCase().includes(lowerFindData) ||
-            course.description.toLowerCase().includes(lowerFindData) ||
-            course.mainText.toLowerCase().includes(lowerFindData) ||
-            course.area.toLowerCase().includes(lowerFindData)
-        );
-    });
+        this.courses = allCourses.filter((course) => {
+            const lowerFindData = findData.toLowerCase();
+            return (
+                course.paragraph.toLowerCase().includes(lowerFindData) ||
+                course.description.toLowerCase().includes(lowerFindData) ||
+                course.mainText.toLowerCase().includes(lowerFindData) ||
+                course.area.toLowerCase().includes(lowerFindData)
+            );
+        });
 
-    console.log("Найденные курсы:", this.courses); // Логируем найденные курсы
+        console.log("Найденные курсы:", this.courses); // Логируем найденные курсы
     }
 
     // Удаление курса
