@@ -3,17 +3,22 @@
 
 <main class="main">
     <app-side-filter></app-side-filter>
-    <app-list_card [editorStatus]="editor"></app-list_card>
 
-    @if(userStatus === "admin"){
-        <section class="main_buttons">
-            @if(editor === false){
-                <button class="main_editor-section" (click)="switchStatus()">Редактирование статей</button>
-            }
-            @else {
-                <button class="main_add-section" routerLink="/editor">Добавить статьи</button>
-                <button class="main_cancellation" (click)="switchStatus()">Отмена</button>
-            }
-        </section>
-    }
+    <section class="main_information">
+        @if(userStatus === "admin"){
+            <section class="main_buttons">
+                @if(editor === false){
+                    <button class="main_editor-section" (click)="switchStatus()">Редактирование статей</button>
+                }
+                @else {
+                    <button class="main_add-section" routerLink="/editor">Добавить статьи</button>
+                    <button class="main_cancellation" (click)="switchStatus()">Отмена</button>
+                }
+            </section>
+        }
+
+        <app-list_card [editorStatus]="editor"></app-list_card>
+
+    </section>
+     
 </main>

@@ -1,6 +1,6 @@
 <app-static-header></app-static-header>
 <app-active-header></app-active-header>
-<main class="editor">
+<main class="editor" [formGroup]="courseContent">
     
     <h1 class="editor_title">Новая статья</h1>
     
@@ -8,14 +8,14 @@
         
         <section class="">
             <h1>Заголовок</h1>
-            <input type="text">
+            <input type="text" formControlName="paragraph">
 
             <h1>Описание</h1>
-            <textarea type="text"></textarea>
+            <textarea type="text" formControlName="description"></textarea>
         </section>
         
         <section class="editor_img-logo">
-            <input type="file">
+            <input type="file" >
         </section>
     
     </section>

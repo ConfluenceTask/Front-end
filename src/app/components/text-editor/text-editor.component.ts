@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { LibraryService } from '../../services/library.service';
 
 @Component({
   selector: 'app-text-editor',
@@ -8,13 +9,17 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 export class TextEditorComponent implements AfterViewInit {
   @ViewChild('editorContent') editorContent!: ElementRef;
   
+  constructor(private _libraryService: LibraryService) {
+    _libraryService.textEditorData = this.content
+  }
+
   ngAfterViewInit() {
     if (this.content) {
       this.editorContent.nativeElement.innerHTML = this.content;
     }
   }
 
-  private content: string = '';
+  public content: string = '';
 
   getContent(): string {
     return this.editorContent?.nativeElement.innerHTML || '';

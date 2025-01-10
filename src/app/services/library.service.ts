@@ -3,13 +3,16 @@ import { coursesData$ } from '../../data/courses-list';
 import { take } from 'rxjs';
 import { ICourse } from '../interfaces/course.interface';
 import { Router } from '@angular/router';
+import { IAddCourse } from '../interfaces/add-course.interface';
 
 @Injectable()
 export class LibraryService {
     public courses: ICourse[] = this.getCourses()
+    public textEditorData: string = ''
 
     constructor(private _router: Router) {}
 
+    // Получение списка курсов
     protected getCourses(): ICourse[] {
         let listCourses: ICourse[] = []
         coursesData$.pipe(take(1)).subscribe((arr) => {
@@ -18,9 +21,19 @@ export class LibraryService {
         return listCourses
     }
 
-    public addCourse(course: ICourse): void {
-        this.courses.push(course)
-        console.log(this.courses)
+    // Добавление курса
+    public addCourse(course: IAddCourse): void {
+        const newCourse: ICourse = {
+            id: Math.max(...this.courses.map(course => course.id), 0) + 1,
+            paragraph: course.paragraph,
+            description: course.description,
+            mainText: this.textEditorData,
+            area: "",
+            avatar: "../../assets/images/cards/67dae236440d66d6a04d840b9113bd01.jpg",
+            favorite: false
+        };
+        this.courses.push(newCourse);
+        console.log("Добавлен новый курс:", newCourse);
     }
 
     // Поисковик по курсам
@@ -51,6 +64,11 @@ export class LibraryService {
 
     // Удаление курса
     public deleteCourse(id: number): void {
+        const courseToRemove = this.courses.find((course) => course.id === id);
+        if (courseToRemove) {
+            const index = this.courses.indexOf(courseToRemove);
+            this.courses.splice(index, 1);
+        }
         
     }
 
