@@ -18,9 +18,9 @@
 
             <h1 class="admin-section_paragraph-inputs">Должность</h1>
             <select formControlName="major">
-                <option value="">Должность 1</option>
-                <option value="">Должность 2</option>
-                <option value="">Должность 3</option>
+                <option value="majorOne">Должность 1</option>
+                <option value="majorTwo">Должность 2</option>
+                <option value="majorThree">Должность 3</option>
             </select> 
 
             <h1 class="admin-section_paragraph-inputs">Стажер</h1>
@@ -44,7 +44,10 @@
             <h1 class="admin-section_paragraph-inputs">Отчество</h1>
             <input type="text" formControlName="patronymic" placeholder="Отчество" class="authorization_login">
 
-            <button class="admin-section_button" (click)="saveUser()">Добавить пользователя</button>
+            <section class="admin-section_paragraph-button">
+                <button class="admin-section_button" (click)="saveUser()">Сохранить</button>
+                <button class="admin-section_cancellation" (click)="clearForm()">Отмена</button>
+            </section>
         </form>
     </section>
 </main>

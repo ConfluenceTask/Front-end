@@ -14,9 +14,26 @@
         align-items: center;
 
         .editor_img-logo {
-            border: 0.3rem dashed black;
-            border-radius: 2px;
-            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: 0.3rem dashed gray;
+            border-radius: 4px;
+            block-size: 6rem;
+
+            .editor_img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1rem;
+                color: gray;
+                outline: none;
+            }
         }
     }
 
@@ -25,7 +42,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin: 5rem 0rem;
+        margin: 5rem 0rem 3rem 0rem;
 
         .editor_field {
             height: 42vh;
@@ -38,8 +55,14 @@
         justify-content: space-evenly;
         flex-direction: row;
 
-        .editor_publish, .editor_cancellation {
+        .editor_publish, .editor_cancellation, .editor_draft {
             margin: 0rem 2rem;
+            background-color: #14191A;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            height: 4vh;
+            padding: 0 1vw;
         }
     }
 }

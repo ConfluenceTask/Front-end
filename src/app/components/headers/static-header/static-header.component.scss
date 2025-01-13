@@ -1,12 +1,26 @@
 .header {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: start;
+    flex-direction: row;
     background-color: black;
     height: 8vh;
+    align-items: center;
+    align-content: center;
 
-    .header_logo {
-        color: white;
-        margin: 0 0 0 2vw !important;
+
+    .header_IconWordmark, .header_line, .header_data-base {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 2vh;
+        margin: 0vh 0vw 0 2vw;
+    }
+
+    .header_line {
+        height: 3vh;
+    }
+
+    .header_data-base {
+        height: 2.7vh;
     }
 }

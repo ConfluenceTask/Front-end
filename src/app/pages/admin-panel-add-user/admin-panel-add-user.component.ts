@@ -17,7 +17,7 @@ export class AdminPanelAddUserComponent {
     roles: new FormControl<string>("", Validators.required),
     major: new FormControl<string>("", Validators.required),
     trainee: new FormControl<string>("", Validators.required),
-    phoneNumber: new FormControl<number>(0, Validators.required),
+    phoneNumber: new FormControl<number>(7, Validators.required),
     email: new FormControl<string>("", Validators.required),
     username: new FormControl<string>("", Validators.required),
     lastname: new FormControl<string>("", Validators.required),
@@ -41,5 +41,9 @@ export class AdminPanelAddUserComponent {
     }
 
     this._userService.saveUsers(DataUserSave)
+  }
+
+  protected clearForm(): void{
+    this.dataUserSave.reset();
   }
 }
