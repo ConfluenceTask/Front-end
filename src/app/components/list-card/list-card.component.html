@@ -10,25 +10,25 @@
                         <h3 class="card_name">{{course.paragraph}}</h3>
                         <section class="card_favourites"> 
                             @if(course.favorite === false){
-                                <button class="card_favourites-add" (click)="favoriteCourse(course.id)" >Добавить в избранное</button>
+                                <button class="card_favourites-add" (click)="favoriteCourse(course.id)"><img class="card_button-img" src="../../../assets/images/cards/IconBookmarkStroked.png"></button>
                             }
                             @else {
-                                <button class="card_favourites-remove" (click)="favoriteCourse(course.id)">Удалить из избранного</button>
+                                <button class="card_favourites-remove" (click)="favoriteCourse(course.id)"><img class="card_button-img" src="../../../assets/images/cards/IconBookmarkStroked_on.png"></button>
                             }
                         </section> 
                     </section>
 
                     @if(editorStatus === true){
                         <section class="card_manipulation">
-                            <button class="card_edit" (click)="editCourse(course.id)">Изменить</button>
-                            <button class="card_remove" (click)="deleteCourse(course.id)">Удалить</button>
+                            <button class="card_edit" (click)="editCourse(course.id)"><img class="card_button-img" src="../../../assets/images/cards/IconEdit.png"></button>
+                            <button class="card_remove" (click)="deleteCourse(course.id)"><img class="card_button-img" src="../../../assets/images/cards/IconTrash.png  "></button>
                         </section>
                     }
                     
                 </section>
 
                 <a [routerLink]="['/course', course.id]" class="card_link">
-                    <img src={{course.avatar}}>
+                    <img class="card_img" src={{course.avatar}}>
                 </a>
                 
             </section>

@@ -33,7 +33,6 @@ export class LibraryService {
             favorite: false
         };
         this.courses.push(newCourse);
-        console.log("Добавлен новый курс:", newCourse);
     }
 
     // Поисковик по курсам

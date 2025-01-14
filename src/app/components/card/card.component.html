@@ -1,14 +1,24 @@
+<app-static-header></app-static-header>
+<app-active-header></app-active-header>
+
+
 <main class="card">
-    <section class="card_block-paragraph">
-        <h1>{{course?.paragraph}}</h1>
-        <img [src]="course?.avatar">
-    </section>
+    
+    <app-side-filter></app-side-filter>
+    
+    <section class="card_block">
+        <section class="card_block-paragraph">
+            <h1>{{course?.paragraph}}</h1>
 
-    <section class="card_descriptions">
-        <h2>{{course?.description}}</h2>
-    </section>
+            <section class="card_descriptions">
+                <h2>{{course?.description}}</h2>
+            </section>
 
-    <section class="card_main-text">
-        <h2>{{course?.mainText}}</h2>
+            <img [src]="course?.avatar">
+        </section>
+
+        <section class="card_main-text">
+            <h2>{{course?.mainText}}</h2>
+        </section>
     </section>
 </main>

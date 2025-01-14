@@ -9,14 +9,13 @@ import { LibraryService } from '../../services/library.service';
 export class TextEditorComponent implements AfterViewInit {
   @ViewChild('editorContent') editorContent!: ElementRef;
   
-  constructor(private _libraryService: LibraryService) {
-    _libraryService.textEditorData = this.content
-  }
+  constructor(private _libraryService: LibraryService) { }
 
   ngAfterViewInit() {
     if (this.content) {
       this.editorContent.nativeElement.innerHTML = this.content;
     }
+    this._libraryService.textEditorData = this.getContent()
   }
 
   public content: string = '';
@@ -29,6 +28,7 @@ export class TextEditorComponent implements AfterViewInit {
     if (this.editorContent) {
       this.editorContent.nativeElement.innerHTML = value;
     }
+    this._libraryService.textEditorData = this.getContent()
   }
 
   applyStyle(style: string) {
@@ -77,6 +77,7 @@ export class TextEditorComponent implements AfterViewInit {
     }
     
     range.surroundContents(span);
+    this._libraryService.textEditorData = this.getContent()
   }
 
   toggleList(type: 'ordered' | 'unordered') {
@@ -91,5 +92,6 @@ export class TextEditorComponent implements AfterViewInit {
     list.appendChild(li);
     range.deleteContents();
     range.insertNode(list);
+    this._libraryService.textEditorData = this.getContent()
   }
 }
